@@ -194,6 +194,21 @@ public class BasePage {
 
     }
 
+    public WebElement obterCelula(String searchColumn, String value, String buttonColumn, String idTable) {
+        //encontrar coluna do registro
+        WebElement table = getDriver().findElement(By.xpath("//table[@id='"+idTable+"']"));
+        int idColumn = getColumnIndice(searchColumn, table);
+
+        //encontrar linha do registro
+        int idLine = getLineIndice(value, table, idColumn);
+
+        //procurar coluna do botão
+        int idButtonColumn = getColumnIndice(buttonColumn, table);
+
+        //clicar no botão da célula encontrada
+        WebElement celula = table.findElement(By.xpath(".//tr["+idLine+"]/td["+idButtonColumn+"]"));
+        return celula;
+    }
     public void clickOnTableButton(String searchColumn, String value, String buttonColumn, String idTable) {
         //encontrar coluna do registro
         WebElement table = getDriver().findElement(By.xpath("//table[@id='elementosForm:tableUsuarios']"));

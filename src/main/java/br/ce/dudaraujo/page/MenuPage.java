@@ -9,7 +9,11 @@ public class MenuPage extends BasePage {
         click(By.className("dropdown-toggle"));
     }
 
-    public void clicSubMenuAdcionar() {
+    public void clickSubMenuAdcionar() {
         click(By.xpath("//a[contains (.,'Adicionar')]"));
+    }
+
+    public void clickSubMenuListar() {
+        click(By.xpath("//a[contains (.,'Listar')]"));
     }
 }
