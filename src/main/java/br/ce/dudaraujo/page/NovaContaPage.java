@@ -17,4 +17,9 @@ public class NovaContaPage extends BasePage {
         String msg = getFieldText(By.xpath("//div[@class='alert alert-success']"));
         return msg;
     }
+
+    public String getMensagemErro() {
+        String msg = getFieldText(By.xpath("//div[@class='alert alert-danger']"));
+        return msg;
+    }
 }
