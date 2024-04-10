@@ -16,4 +16,8 @@ public class MenuPage extends BasePage {
     public void clickSubMenuListar() {
         click(By.xpath("//a[contains (.,'Listar')]"));
     }
+
+    public void clickMenuCriarMovimentacao() {
+        click(By.xpath("//a[contains (.,'Criar Movimentação')]"));
+    }
 }
