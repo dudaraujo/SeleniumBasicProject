@@ -1,7 +1,12 @@
 package br.ce.dudaraujo.page;
 
 import br.ce.dudaraujo.core.BasePage;
+import br.ce.dudaraujo.core.DriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MovimentacaoPage extends BasePage {
 
@@ -45,5 +50,14 @@ public class MovimentacaoPage extends BasePage {
     public String getMensagemConfirmacao() {
         String msg = getFieldText(By.xpath("//div[@class='alert alert-success']"));
         return msg;
+    }
+
+    public List<String> obterErros() {
+        List<WebElement> erros = DriverFactory.getDriver().findElements(By.xpath("//div[@class='alert alert-danger']//li"));
+        List<String> retorno = new ArrayList<String>();
+        for(WebElement erro: erros) {
+            retorno.add(erro.getText());
+        }
+        return retorno;
     }
 }

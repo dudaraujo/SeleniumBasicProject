@@ -6,6 +6,9 @@ import br.ce.dudaraujo.page.MovimentacaoPage;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class MovimentacaoTest extends BaseTest {
 
     MenuPage menuPage = new MenuPage();
@@ -26,5 +29,24 @@ public class MovimentacaoTest extends BaseTest {
 
         Assert.assertEquals("Movimentação adicionada com sucesso!", movimentacaoPage.getMensagemConfirmacao());
 
+    }
+
+    @Test
+    public void camposObrigatoriosMovimentacao() {
+        menuPage.clickMenuCriarMovimentacao();
+        movimentacaoPage.submit();
+
+        List<String> erros = movimentacaoPage.obterErros();
+
+        Assert.assertTrue(erros.containsAll(Arrays.asList(
+                "Data da Movimentação é obrigatório",
+                "Data do pagamento é obrigatório",
+                "Descrição é obrigatório",
+                "Interessado é obrigatório",
+                "Valor é obrigatório",
+                "Valor deve ser um número"
+        )));
+
+        Assert.assertEquals(6, erros.size());
     }
 }
