@@ -60,4 +60,9 @@ public class MovimentacaoPage extends BasePage {
         }
         return retorno;
     }
+
+    public String getMensagemErro() {
+        String msg = getFieldText(By.xpath("//div[@class='alert alert-danger']"));
+        return msg;
+    }
 }
