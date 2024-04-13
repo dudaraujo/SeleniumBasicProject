@@ -5,8 +5,11 @@ import br.ce.dudaraujo.page.AlterarContaPage;
 import br.ce.dudaraujo.page.MenuPage;
 import br.ce.dudaraujo.page.NovaContaPage;
 import org.junit.Assert;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ContaTest extends BaseTest {
 
     private MenuPage menuPage = new MenuPage();
@@ -15,7 +18,7 @@ public class ContaTest extends BaseTest {
     private AlterarContaPage alterarContaPage = new AlterarContaPage();
 
     @Test
-    public void inserirConta() {
+    public void teste1_inserirConta() {
 
         menuPage.clickMenuConta();
         menuPage.clickSubMenuAdcionar();
@@ -28,7 +31,7 @@ public class ContaTest extends BaseTest {
 }
 
     @Test
-    public void alterarConta() {
+    public void teste2_alterarConta() {
         menuPage.clickMenuConta();
         menuPage.clickSubMenuListar();
         alterarContaPage.clickContaCriada("Conta1");
@@ -39,14 +42,15 @@ public class ContaTest extends BaseTest {
     }
 
     @Test
-    public void criarContaMesmoNome() {
+    public void teste3_criarContaMesmoNome() {
         menuPage.clickMenuConta();
         menuPage.clickSubMenuAdcionar();
-        novaContaPage.setNomeConta("Conta1");
+        novaContaPage.setNomeConta("Conta 1 Editada");
         novaContaPage.salvarConta();
 
         Assert.assertEquals("Já existe uma conta com esse nome!", novaContaPage.getMensagemErro());
     }
+
 
 
 }

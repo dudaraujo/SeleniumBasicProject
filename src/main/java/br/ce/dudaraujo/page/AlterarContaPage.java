@@ -23,4 +23,8 @@ public class AlterarContaPage extends BasePage {
         String msg = getFieldText(By.xpath("//div[@class='alert alert-success']"));
         return msg;
     }
+
+    public void excluirConta(String conta) {
+        obterCelula("Conta", conta, "Ações", "tabelaContas").findElement(By.xpath(".//span[@class='glyphicon glyphicon-remove-circle']")).click();
+    }
 }

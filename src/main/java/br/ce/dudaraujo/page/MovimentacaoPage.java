@@ -40,7 +40,7 @@ public class MovimentacaoPage extends BasePage {
     }
 
     public void selectStatus(String status) {
-        click(By.id("status_pendente"));
+        click(By.id("status_pago"));
     }
 
     public void submit() {
