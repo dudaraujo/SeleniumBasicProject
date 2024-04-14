@@ -14,6 +14,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import static br.ce.dudaraujo.core.Properties.NOME_CONTA_ALTERADA;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovimentacaoTest extends BaseTest {
 
@@ -31,7 +33,7 @@ public class MovimentacaoTest extends BaseTest {
         movimentacaoPage.selectDesc("teste da duda");
         movimentacaoPage.selectInteressado("Dudica");
         movimentacaoPage.selectValor("10000");
-        movimentacaoPage.selectConta("Conta 1 Editada");
+        movimentacaoPage.selectConta(NOME_CONTA_ALTERADA);
         movimentacaoPage.selectStatus("Pago");
         movimentacaoPage.submit();
 
@@ -69,7 +71,7 @@ public class MovimentacaoTest extends BaseTest {
         movimentacaoPage.selectDesc("teste da duda");
         movimentacaoPage.selectInteressado("Dudica");
         movimentacaoPage.selectValor("10000");
-        movimentacaoPage.selectConta("Conta 1 Editada");
+        movimentacaoPage.selectConta(NOME_CONTA_ALTERADA);
         movimentacaoPage.selectStatus("Pendente");
         movimentacaoPage.submit();
 

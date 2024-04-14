@@ -9,6 +9,8 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import static br.ce.dudaraujo.core.Properties.NOME_CONTA_ALTERADA;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 public class ResumoTest extends BaseTest {
@@ -20,7 +22,7 @@ public class ResumoTest extends BaseTest {
     @Test
     public void teste1_removerMovimentacao() {
         menuPage.clickMenuResumoMensal();
-        resumoMensalPage.clickMovimentacao("Conta 1 Editada");
+        resumoMensalPage.clickMovimentacao(NOME_CONTA_ALTERADA);
 
         Assert.assertEquals("Movimentação removida com sucesso!", resumoMensalPage.getMensagemConfirmacao());
     }
@@ -29,6 +31,8 @@ public class ResumoTest extends BaseTest {
         menuPage.clickMenuResumoMensal();
 
         Assert.assertEquals("Seu Barriga - Extrato", DriverFactory.getDriver().getTitle());
+
+
     }
 
 

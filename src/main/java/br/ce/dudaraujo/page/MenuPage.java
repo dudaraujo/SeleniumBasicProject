@@ -5,6 +5,10 @@ import org.openqa.selenium.By;
 
 public class MenuPage extends BasePage {
 
+    public void clickMenuHome() {
+        click(By.xpath("//a[contains (.,'Home')]"));
+    }
+
     public void clickMenuConta() {
         click(By.className("dropdown-toggle"));
     }

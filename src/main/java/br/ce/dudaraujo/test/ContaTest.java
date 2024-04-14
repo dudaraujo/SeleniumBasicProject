@@ -9,6 +9,8 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import static br.ce.dudaraujo.core.Properties.NOME_CONTA_ALTERADA;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ContaTest extends BaseTest {
 
@@ -35,7 +37,7 @@ public class ContaTest extends BaseTest {
         menuPage.clickMenuConta();
         menuPage.clickSubMenuListar();
         alterarContaPage.clickContaCriada("Conta1");
-        alterarContaPage.editNomeConta("Conta 1 Editada");
+        alterarContaPage.editNomeConta(NOME_CONTA_ALTERADA);
         alterarContaPage.salvarContaAlterada();
 
         Assert.assertEquals("Conta alterada com sucesso!", alterarContaPage.getMensagemConfirmacao());
@@ -45,7 +47,7 @@ public class ContaTest extends BaseTest {
     public void teste3_criarContaMesmoNome() {
         menuPage.clickMenuConta();
         menuPage.clickSubMenuAdcionar();
-        novaContaPage.setNomeConta("Conta 1 Editada");
+        novaContaPage.setNomeConta(NOME_CONTA_ALTERADA);
         novaContaPage.salvarConta();
 
         Assert.assertEquals("Já existe uma conta com esse nome!", novaContaPage.getMensagemErro());

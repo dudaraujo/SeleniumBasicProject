@@ -209,6 +209,7 @@ public class BasePage {
         WebElement celula = table.findElement(By.xpath(".//tr["+idLine+"]/td["+idButtonColumn+"]"));
         return celula;
     }
+
     public void clickOnTableButton(String searchColumn, String value, String buttonColumn, String idTable) {
         //encontrar coluna do registro
         WebElement table = getDriver().findElement(By.xpath("//table[@id='elementosForm:tableUsuarios']"));

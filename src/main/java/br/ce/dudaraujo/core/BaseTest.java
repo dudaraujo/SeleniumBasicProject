@@ -12,14 +12,7 @@ public class BaseTest {
     //@Rule
     //public TestName testName = new TestName();
 
-    @Before
-    public void inicializa() {
-        loginPage.acessarTelaInicial();
-        loginPage.setEmail("mduda_araujo@teste.com");
-        loginPage.setSenha("dudinha");
-        loginPage.enter();
 
-    }
 
 
     @After

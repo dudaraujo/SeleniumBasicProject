@@ -7,6 +7,8 @@ import br.ce.dudaraujo.page.NovaContaPage;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static br.ce.dudaraujo.core.Properties.NOME_CONTA_ALTERADA;
+
 public class RemoverConta extends BaseTest {
 
     private MenuPage menuPage = new MenuPage();
@@ -18,7 +20,7 @@ public class RemoverConta extends BaseTest {
     public void removerContaComMovimentacao() {
         menuPage.clickMenuConta();
         menuPage.clickSubMenuListar();
-        alterarContaPage.excluirConta("Conta 1 Editada");
+        alterarContaPage.excluirConta(NOME_CONTA_ALTERADA);
 
         Assert.assertEquals("Conta em uso na movimentações", novaContaPage.getMensagemErro());
 

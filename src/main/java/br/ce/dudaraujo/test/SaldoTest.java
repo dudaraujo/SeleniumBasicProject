@@ -5,13 +5,17 @@ import br.ce.dudaraujo.page.MenuPage;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static br.ce.dudaraujo.core.Properties.NOME_CONTA_ALTERADA;
+
 public class SaldoTest extends BaseTest {
 
     MenuPage menuPage = new MenuPage();
 
     @Test
     public void testeverificaSaldoConta() {
-        String saldo = menuPage.getSaldo("Conta 1 Editada");
+
+        menuPage.clickMenuHome();
+        String saldo = menuPage.getSaldo(NOME_CONTA_ALTERADA);
 
         Assert.assertEquals("10000.00", saldo);
 

@@ -10,6 +10,7 @@ public class ResumoMensalPage extends BasePage {
 
     }
 
+
     public String getMensagemConfirmacao() {
         String msg = getFieldText(By.xpath("//div[@class='alert alert-success']"));
         return msg;
