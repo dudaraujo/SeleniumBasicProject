@@ -15,9 +15,9 @@ public class SaldoTest extends BaseTest {
     public void testeverificaSaldoConta() {
 
         menuPage.clickMenuHome();
-        String saldo = menuPage.getSaldo(NOME_CONTA_ALTERADA);
+        String saldo = menuPage.getSaldo("Conta para saldo");
 
-        Assert.assertEquals("10000.00", saldo);
+        Assert.assertEquals("534.00", saldo);
 
     }
 }

@@ -22,7 +22,7 @@ public class ResumoTest extends BaseTest {
     @Test
     public void teste1_removerMovimentacao() {
         menuPage.clickMenuResumoMensal();
-        resumoMensalPage.clickMovimentacao(NOME_CONTA_ALTERADA);
+        resumoMensalPage.clickMovimentacao("Conta para movimentacoes");
 
         Assert.assertEquals("Movimentação removida com sucesso!", resumoMensalPage.getMensagemConfirmacao());
     }

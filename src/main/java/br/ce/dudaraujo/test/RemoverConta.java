@@ -20,7 +20,7 @@ public class RemoverConta extends BaseTest {
     public void removerContaComMovimentacao() {
         menuPage.clickMenuConta();
         menuPage.clickSubMenuListar();
-        alterarContaPage.excluirConta(NOME_CONTA_ALTERADA);
+        alterarContaPage.excluirConta("Conta com movimentacao");
 
         Assert.assertEquals("Conta em uso na movimentações", novaContaPage.getMensagemErro());
 

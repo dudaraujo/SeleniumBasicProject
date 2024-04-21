@@ -36,8 +36,9 @@ public class ContaTest extends BaseTest {
     public void teste2_alterarConta() {
         menuPage.clickMenuConta();
         menuPage.clickSubMenuListar();
-        alterarContaPage.clickContaCriada("Conta1");
-        alterarContaPage.editNomeConta(NOME_CONTA_ALTERADA);
+        alterarContaPage.clickContaCriada("Conta para alterar");
+        alterarContaPage.editNomeConta("Conta Alterada");
+        //alterarContaPage.editNomeConta(NOME_CONTA_ALTERADA);
         alterarContaPage.salvarContaAlterada();
 
         Assert.assertEquals("Conta alterada com sucesso!", alterarContaPage.getMensagemConfirmacao());
@@ -47,7 +48,7 @@ public class ContaTest extends BaseTest {
     public void teste3_criarContaMesmoNome() {
         menuPage.clickMenuConta();
         menuPage.clickSubMenuAdcionar();
-        novaContaPage.setNomeConta(NOME_CONTA_ALTERADA);
+        novaContaPage.setNomeConta("Conta mesmo nome");
         novaContaPage.salvarConta();
 
         Assert.assertEquals("Já existe uma conta com esse nome!", novaContaPage.getMensagemErro());

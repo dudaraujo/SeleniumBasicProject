@@ -22,21 +22,7 @@ import org.junit.runners.Suite;
 })
 public class SuitGeral {
 
-    private static LoginPage loginPage = new LoginPage();
 
-    @BeforeClass
-    public static void inicializa() {
-        loginPage.acessarTelaInicial();
-        loginPage.setEmail("mduda_araujo@teste.com");
-        loginPage.setSenha("dudinha");
-        loginPage.enter();
-
-    }
-
-    @AfterClass
-    public static void finaliza() {
-        DriverFactory.killDriver();
-    }
 
 
 }

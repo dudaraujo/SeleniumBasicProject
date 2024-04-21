@@ -16,4 +16,12 @@ public class ResumoMensalPage extends BasePage {
         return msg;
     }
 
+    public void clickAno(String ano) {
+        selectCombo("ano", ano);
+    }
+
+    public void clickSubmit() {
+        click(By.xpath("//input[@value='Buscar']"));
+    }
+
 }

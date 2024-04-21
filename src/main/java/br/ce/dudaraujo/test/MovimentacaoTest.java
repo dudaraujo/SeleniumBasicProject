@@ -33,7 +33,7 @@ public class MovimentacaoTest extends BaseTest {
         movimentacaoPage.selectDesc("teste da duda");
         movimentacaoPage.selectInteressado("Dudica");
         movimentacaoPage.selectValor("10000");
-        movimentacaoPage.selectConta(NOME_CONTA_ALTERADA);
+        movimentacaoPage.selectConta("Conta para movimentacoes");
         movimentacaoPage.selectStatus("Pago");
         movimentacaoPage.submit();
 
@@ -71,7 +71,7 @@ public class MovimentacaoTest extends BaseTest {
         movimentacaoPage.selectDesc("teste da duda");
         movimentacaoPage.selectInteressado("Dudica");
         movimentacaoPage.selectValor("10000");
-        movimentacaoPage.selectConta(NOME_CONTA_ALTERADA);
+        movimentacaoPage.selectConta("Conta para movimentacoes");
         movimentacaoPage.selectStatus("Pendente");
         movimentacaoPage.submit();
 
