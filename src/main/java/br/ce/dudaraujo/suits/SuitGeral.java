@@ -22,6 +22,21 @@ import org.junit.runners.Suite;
 })
 public class SuitGeral {
 
+    private static LoginPage page = new LoginPage();
+@BeforeClass
+    public static void resetar() {
+
+    page.acessarTelaInicial();
+    page.setEmail("mduda_araujo@teste.com");
+    page.setSenha("dudinha");
+    page.enter();
+    page.resetDados();
+
+    DriverFactory.killDriver();
+
+    //$ java -jar selenium-server-standalone-3.11.0.jar -role hub
+
+}
 
 
 

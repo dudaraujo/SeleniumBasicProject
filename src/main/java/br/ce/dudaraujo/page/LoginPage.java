@@ -22,6 +22,10 @@ public class LoginPage extends BasePage {
         click(By.xpath("//button[@type='submit']"));
     }
 
+    public void resetDados() {
+        click(By.xpath("//a[contains (.,'reset')]"));
+    }
+
 
 
 

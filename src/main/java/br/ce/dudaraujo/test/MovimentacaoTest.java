@@ -16,7 +16,7 @@ import java.util.List;
 
 import static br.ce.dudaraujo.core.Properties.NOME_CONTA_ALTERADA;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovimentacaoTest extends BaseTest {
 
     MenuPage menuPage = new MenuPage();

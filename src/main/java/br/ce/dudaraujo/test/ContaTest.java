@@ -11,7 +11,7 @@ import org.junit.runners.MethodSorters;
 
 import static br.ce.dudaraujo.core.Properties.NOME_CONTA_ALTERADA;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ContaTest extends BaseTest {
 
     private MenuPage menuPage = new MenuPage();
